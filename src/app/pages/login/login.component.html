@@ -1,1 +1,9 @@
-<p>login works!</p>
+<div class="example-container">
+    <mat-form-field>
+      <mat-label>Digite a chave para entrar</mat-label>
+      <input matInput placeholder="pat@example.com" [formControl]="key" required>
+    
+    </mat-form-field>
+
+    <button mat-button color="primary" (click)="acessoHome()">Entrar</button>
+  </div>
