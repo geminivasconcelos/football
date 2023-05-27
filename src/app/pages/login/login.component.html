@@ -1,9 +1,33 @@
-<div class="example-container">
-    <mat-form-field>
-      <mat-label>Digite a chave para entrar</mat-label>
-      <input matInput placeholder="pat@example.com" [formControl]="key" required>
-    
-    </mat-form-field>
+<section class="container">
+  <div class="container-principal-login">
+    <div class="container-secundario-login">
+      <div class="content-taca">
+        <img src="../../../assets/taca/taca25.png" alt="" class="img-taca" />
+      </div>
+      <mat-card class="card-login">
+        <mat-card-header class="card-header-login">
+          <mat-card-title class="card-title-login"
+            >Liga de Football</mat-card-title
+          >
+          <mat-card-subtitle class="card-subtitle-login"
+            >Todos os jogos em um só lugar</mat-card-subtitle
+          >
+        </mat-card-header>
 
-    <button mat-button color="primary" (click)="acessoHome()">Entrar</button>
+        <mat-card-content class="card-content">
+          <div class="container-input-btn">
+            <mat-form-field appearance="fill" class="">
+              <mat-label class="label-input-key">Chave de Acesso</mat-label>
+              <input matInput class="input-key" [formControl]="key" required/>
+              <mat-icon matSuffix class="icon-input">key</mat-icon>
+            </mat-form-field>
+
+            <div class="container-btn">
+              <button class="btn-access" mat-raised-button (click)="goHome()">acessar portal</button>
+            </div>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </div>
   </div>
+</section>
