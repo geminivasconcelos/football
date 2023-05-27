@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { Router } from '@angular/router';
 
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { IntegracoesService } from 'src/app/integracoes.service';
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -11,25 +14,13 @@ export class LoginComponent {
   key = new FormControl('');
 
   constructor(
-    private router: Router
+    private router: Router,
+    private integracoes: IntegracoesService
   ) {}
 
   ngOnInit() {}
 
-  acessoHome() {
-    fetch('https://v3.football.api-sports.io/players/seasons', {
-      method: 'GET',
-      headers: {
-        'x-rapidapi-host': 'v3.football.api-sports.io',
-        'x-rapidapi-key': `${this.key.value}`,
-      },
-    })
-      .then((response) => {
-        console.log(response);
-        this.router.navigate(['home']);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+  goHome() {
+    this.router.navigate(['home']);
   }
 }
