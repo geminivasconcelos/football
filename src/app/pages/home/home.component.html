@@ -1,1 +1,168 @@
-<p>home works!</p>
+<section class="dashborad">
+  <section class="container-principal">
+    <div class="container-filter-title-principal">
+      <div class="container-filter-title-secundario">
+        <div class="container-title">
+          <h2 class="title">FOOTBALL</h2>
+          <mat-icon matSuffix class="icon-title">sports_soccer</mat-icon>
+        </div>
+        <div class="container-filter-one">
+          <mat-form-field class="input-filter">
+            <mat-label class="label-input">SELECIONE A TEMPORADA</mat-label>
+
+            <mat-select panelClass="panel-select">
+              <mat-option class="select-option">Clear</mat-option>
+              <mat-option class="select-option">Valid option</mat-option>
+              <mat-option class="select-option">Invalid option</mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <mat-form-field class="input-filter">
+            <mat-label class="label-input">SELECIONE A TEMPORADA</mat-label>
+
+            <mat-select>
+              <mat-option class="select-option">Clear</mat-option>
+              <mat-option class="select-option">Valid option</mat-option>
+              <mat-option class="select-option">Invalid option</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+      </div>
+
+      <div style="display: flex; flex-direction: column">
+        <div class="container-filter-two">
+          <mat-form-field class="input-filter">
+            <mat-label class="label-input">SELECIONE A TEMPORADA</mat-label>
+
+            <mat-select panelClass="panel-select">
+              <mat-option class="select-option">Clear</mat-option>
+              <mat-option class="select-option">Valid option</mat-option>
+              <mat-option class="select-option">Invalid option</mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <mat-form-field class="input-filter">
+            <mat-label class="label-input">SELECIONE A TEMPORADA</mat-label>
+
+            <mat-select>
+              <mat-option class="select-option">Clear</mat-option>
+              <mat-option class="select-option">Valid option</mat-option>
+              <mat-option class="select-option">Invalid option</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+
+        <div class="banner" id="img-banner"></div>
+      </div>
+
+      <div class="container-btn">
+        <button mat-button class="btn-logout">
+          SAIR
+          <mat-icon matSuffix class="icon-input">filter_list</mat-icon>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <section class="dashborad-tow">
+    <div class="container-players">
+      <mat-card class="card-players">
+        <mat-card-header class="header-card-playres">
+          <mat-card-title class="title-header-card-players"
+            >JOGADORES</mat-card-title
+          >
+          <div>
+            <mat-icon matSuffix class="icon-header-card-players"
+              >directions_run</mat-icon
+            >
+            <mat-icon matSuffix class="icon-header-card-players"
+              >directions_run</mat-icon
+            >
+            <mat-icon matSuffix class="icon-header-card-players"
+              >directions_run</mat-icon
+            >
+          </div>
+        </mat-card-header>
+        <mat-card-content class="card-content-players">
+          <table
+            mat-table
+            [dataSource]="dataSource"
+            class="table-card-content-players"
+          >
+            <ng-container
+              class="ngContainer-table-players"
+              matColumnDef="idade"
+            >
+              <th
+                mat-header-cell
+                *matHeaderCellDef
+                class="header-players-table"
+                mat-sort-header
+              >
+                IDADE
+              </th>
+              <td mat-cell *matCellDef="let element" class="cell-players-table">
+                {{ element.idade }}
+              </td>
+            </ng-container>
+
+            <ng-container class="ngContainer-table-players" matColumnDef="name">
+              <th
+                mat-header-cell
+                *matHeaderCellDef
+                class="header-players-table"
+                mat-sort-header
+              >
+                NOME
+              </th>
+              <td mat-cell *matCellDef="let element" class="cell-players-table">
+                {{ element.name }}
+              </td>
+            </ng-container>
+
+            <ng-container
+              class="ngContainer-table-players"
+              matColumnDef="weight"
+            >
+              <th
+                mat-header-cell
+                *matHeaderCellDef
+                class="header-players-table"
+                mat-sort-header
+              >
+                NACIONALIDADE
+              </th>
+              <td mat-cell *matCellDef="let element" class="cell-players-table">
+                {{ element.weight }}
+              </td>
+            </ng-container>
+
+            <ng-container
+              class="ngContainer-table-players"
+              matColumnDef="symbol"
+            >
+              <th
+                mat-header-cell
+                *matHeaderCellDef
+                class="header-players-table"
+                mat-sort-header
+              >
+                Symbol
+              </th>
+              <td mat-cell *matCellDef="let element" class="cell-players-table">
+                {{ element.symbol }}
+              </td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="displayedColumns" mat-sort-header></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+          </table>
+          <mat-paginator
+            [pageSizeOptions]="[11, 21, 25, 100]"
+            aria-label="Select page of users"
+          ></mat-paginator>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </section>
+</section>
