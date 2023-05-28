@@ -16,6 +16,9 @@ import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatSelectModule } from '@angular/material/select';
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
 import { NgIf } from '@angular/common';
 
 @NgModule({
@@ -37,6 +40,9 @@ import { NgIf } from '@angular/common';
     NgIf,
     MatButtonModule,
     MatIconModule,
+    MatSelectModule,
+    MatTableModule,
+    MatPaginatorModule,
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [],
