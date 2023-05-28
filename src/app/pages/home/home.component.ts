@@ -16,6 +16,13 @@ export interface PeriodicElement {
   weight: number;
 }
 
+export interface jogos {
+  derrotas: number;
+  empates: number;
+  vitorias: number;
+  jogos: number;
+}
+
 const ELEMENT_DATA: PeriodicElement[] = [
   { idade: 1, name: 'Hydrogen', weight: 1.0079 },
   { idade: 2, name: 'Helium', weight: 4.0026 },
@@ -29,6 +36,19 @@ const ELEMENT_DATA: PeriodicElement[] = [
   { idade: 10, name: 'Neon', weight: 20.1797 },
 ];
 
+const JOGOS: jogos[] = [
+  { derrotas: 1, empates: 1, vitorias: 1, jogos: 1 },
+  { derrotas: 2, empates: 1, vitorias: 4, jogos: 1 },
+  { derrotas: 3, empates: 1, vitorias: 6, jogos: 1 },
+  { derrotas: 4, empates: 1, vitorias: 9, jogos: 1 },
+  { derrotas: 5, empates: 1, vitorias: 10, jogos: 1 },
+  { derrotas: 6, empates: 1, vitorias: 12, jogos: 1 },
+  { derrotas: 7, empates: 1, vitorias: 14, jogos: 1 },
+  { derrotas: 8, empates: 1, vitorias: 15, jogos: 1 },
+  { derrotas: 9, empates: 1, vitorias: 18, jogos: 1 },
+  { derrotas: 10, empates: 1, vitorias: 20, jogos: 1 },
+];
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -39,8 +59,22 @@ export class HomeComponent {
 
   displayedColumns: string[] = ['idade', 'name', 'weight'];
   dataSource!: MatTableDataSource<PeriodicElement>;
+
+  displayedColumnsJogos: string[] = [
+    'derrotas',
+    'empates',
+    'vitorias',
+    'jogos',
+  ];
+  dataSourceJogos!: MatTableDataSource<jogos>;
+
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
+
+  paises: any;
+  liga = [];
+  temporada = [];
+  time = [];
 
   constructor(
     private router: Router,
@@ -48,12 +82,21 @@ export class HomeComponent {
   ) {}
 
   ngOnInit() {
-
     this.dataSource = new MatTableDataSource(ELEMENT_DATA);
+    this.dataSourceJogos = new MatTableDataSource(JOGOS);
+
+    this.dadosFiltros()
   }
 
   ngAfterViewInit() {
     this.dataSource.paginator = this.paginator;
     this.dataSource.sort = this.sort;
+
+    this.dataSourceJogos.paginator = this.paginator;
+    this.dataSourceJogos.sort = this.sort;
+  }
+
+  dadosFiltros() {
+    // this.paises = this.integracoes.getCountries();
   }
 }
