@@ -1,0 +1,234 @@
+.dashborad {
+  width: 100vw;
+  height: 100vh;
+  background: #f7f7f7;
+  display: flex;
+  flex-direction: column;
+}
+
+.container-principal {
+  background: #020120;
+  border-radius: 0px 0px 20px 20px;
+
+  height: 25rem;
+  width: 100%;
+}
+
+.container-filter-title-principal {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.container-filter-title-secundario {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin-left: 3rem;
+}
+
+.container-title {
+  padding-top: 2rem;
+  padding-left: 2rem;
+
+  display: flex;
+  align-items: center;
+  margin-left: 5rem;
+
+  gap: 1rem;
+}
+
+.container-filter-one {
+  display: flex;
+  flex-direction: column;
+
+  margin-top: 3rem;
+
+  gap: 2rem;
+}
+
+.input-filter {
+  width: 26rem;
+}
+
+.title {
+  color: white;
+  font-family: "Orbitron";
+}
+
+.icon-title {
+  color: white;
+  display: flex;
+  font-size: 3.5rem;
+  width: 10rem;
+  height: 4.5rem;
+}
+
+.container-filter {
+  width: 40%;
+}
+
+.label-input {
+  font-family: "Orbitron";
+  font-size: 0.8rem;
+  font-weight: 900;
+}
+
+.icon-input {
+  color: red;
+}
+
+.select-option {
+  color: white;
+}
+
+.container-filter-two {
+  display: flex;
+  flex-direction: row;
+  padding-top: 2rem;
+  gap: 3rem;
+
+  height: 7rem;
+}
+
+.container-btn {
+  padding-top: 3rem;
+  display: flex;
+}
+
+.btn-logout {
+  width: 10rem;
+
+  font-family: "Orbitron";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1rem;
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+
+  color: #080528;
+  background-color: white;
+}
+
+.banner {
+  background-color: white;
+  margin-top: 4rem;
+  height: 18rem;
+  width: 60rem;
+
+  box-shadow: 0px 10px 10px #bcb7b7;
+  border-radius: 20px;
+  //   object-fit: fill;
+
+  background-image: url("../../../assets/banner/realMadrid.webp");
+  background-size: 60rem 18rem;
+  background-repeat: no-repeat;
+}
+
+::ng-deep.mdc-text-field--filled:not(.mdc-text-field--disabled) {
+  background-color: transparent;
+}
+
+::ng-deep.mdc-text-field--filled:not(.mdc-text-field--disabled)
+  .mdc-line-ripple::before {
+  border-bottom-color: #ebc351;
+}
+
+::ng-deep.mdc-text-field:not(.mdc-text-field--disabled) .mdc-text-field__input {
+  color: #ebc351;
+  font-family: "Orbitron";
+}
+
+::ng-deep.mdc-text-field:not(.mdc-text-field--disabled) .mdc-floating-label {
+  color: white;
+}
+
+::ng-deep.mdc-text-field--filled:not(.mdc-text-field--disabled) {
+  background-color: transparent;
+}
+
+::ng-deep.mat-mdc-select-panel {
+  background: #020120;
+}
+
+::ng-deep.mat-mdc-option.mdc-list-item {
+  align-items: center;
+  font-family: "Orbitron";
+  font-weight: 600;
+}
+
+::ng-deep.mdc-list-item__primary-text {
+  color: white;
+  font-family: "Orbitron";
+}
+
+::ng-deep.mat-mdc-select-arrow {
+  color: #ebc351;
+}
+
+// dashborad-tow
+
+.dashborad-tow {
+}
+
+.container-players {
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  margin-left: 2rem;
+  margin-top: 2rem;
+}
+
+.card-players {
+  background: #ffffff;
+  box-shadow: 0px 10px 10px #bcb7b7;
+  border-radius: 20px;
+  width: 35rem;
+}
+
+.header-card-playres {
+  background: #ffbc05;
+  box-shadow: 0px 8px 8px rgba(2, 1, 32, 0.25);
+  border-radius: 20px 20px 0px 0px;
+
+  height: 4rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: centr;
+}
+
+.title-header-card-players {
+  font-family: "Orbitron";
+  font-weight: 900;
+
+  color: #020120;
+}
+
+.icon-header-card-players {
+  color: #020120;
+  font-size: 1.6rem;
+}
+
+.card-content-players {
+  margin-top: 0.8rem;
+}
+
+.ngContainer-table-players {
+  height: 1rem;
+}
+
+.mat-mdc-row .mat-mdc-cell {
+  border-bottom: 1px solid transparent;
+  border-top: 1px solid transparent;
+  cursor: pointer;
+}
+
+.mat-mdc-table .mdc-data-table__row {
+  height: 35px;
+}
